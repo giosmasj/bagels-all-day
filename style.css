@@ -134,7 +134,7 @@ h3 {
     font-size: 1.1em;
 }
 
-.btn-purchase {
+.btn-purchase, .btn-to-shipping, .btn-to-billing {
     display: block;
     margin: 40px auto 80px auto;
     font-size: 1.75em;
@@ -190,7 +190,7 @@ h3 {
 
 body:before {
     content: "";
-    position: absolute;
+    position: fixed;
     width: 100%;
     height: 100%;
     left: 0;
@@ -227,4 +227,16 @@ p {
 
 .letter {
     font-weight: 900;
+}
+
+h6 {
+    text-align: center;
+}
+
+.sign-up-button, .login-button {
+    margin-top: 15px;
+}
+
+label {
+    margin-top: 8px;
 }
