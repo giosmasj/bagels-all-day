@@ -27,12 +27,12 @@
             <div class="contact card jumbotron">
                 <h3>Contact Us!</h3>
                 <label for="email">Email Address:</label>
-                <input class="email-address" name="email" placeholder="Email Address">
-                <label for="phone">Phone Number e.g. 970-555-5555</label>
-                <input class="phone" name="phone" placeholder="Phone Number">
+                <input class="email-address" name="email" placeholder="me@example.com">
+                <label for="phone">Phone Number:</label>
+                <input class="phone" name="phone" placeholder="970-555-5555">
                 <label for="message">Message:</label>
                 <textarea class="message" name="message" placeholder="Hey B.A.D. what's up?!"></textarea>
-                <button class="sign-up-button" type="submit">Send Message</button>
+                <button class="sign-up-button btn btn-primary" type="submit">Send Message</button>
             </div>
         </div>
         <section class="container content-section">
@@ -48,7 +48,69 @@
                 <strong class="cart-total-title">Total</strong>
                 <span class="cart-total-price">$0</span>
             </div>
-            <button class="btn btn-primary btn-purchase" type="button">PURCHASE</button>
+            <button class="btn btn-primary btn-to-shipping" type="button">Proceed to Shipping</button>
+        </section>
+        <section class="container content-section" id="shipping">
+            <div class="shipping card jumbotron">
+                <h3>Shipping</h3>
+                <h6>Please fill out your shipping details below.</h6>
+                <label for="email">Email Address:</label>
+                <input class="email-address" name="email" placeholder="me@example.com">
+                <label for="phone">Phone Number:</label>
+                <input class="phone" name="phone" placeholder="970-555-5555">
+                <label for="first-name">First Name:</label>
+                <input class="first-name" name="first-name" placeholder="John">
+                <label for="first-name">Last Name:</label>
+                <input class="last-name" name="last-name" placeholder="Doe">
+                <label for="street">Street Address:</label>
+                <input class="street" name="street" placeholder="123 Main St.">
+                <label for="apt">Apt, #, etc. (optional):</label>
+                <input class="apt" name="apt" placeholder="B">
+                <label for="city">City:</label>
+                <input class="city" name="city" placeholder="Carbondale">
+                <label for="state">State:</label>
+                <input class="state" name="state" placeholder="CO or Colorado">
+                <label for="zip-code">ZIP:</label>
+                <input class="zip-code" name="zip-code" placeholder="81623">
+                <label>Shipping Method:</label>
+                <select>
+                    <option>Local Pickup - $0.00</option>
+                    <option>Priority Shipping - $19.99</option>
+                    <option>Expedited Shipping - $49.99</option>
+                </select>
+                <button class="btn btn-primary btn-to-billing" type="button">Continue to Billing</button>
+            </div>
+        </section>
+        <section class="container content-section" id="billing">
+            <div class="billing card jumbotron">
+                <h3>Billing</h3>
+                <h6>Please fill out your billing address and credit card details below.</h6>
+                <label for="email">Email Address:</label>
+                <input class="email-address" name="email" placeholder="me@example.com">
+                <label for="phone">Phone Number:</label>
+                <input class="phone" name="phone" placeholder="970-555-5555">
+                <label for="first-name">First Name:</label>
+                <input class="first-name" name="first-name" placeholder="John">
+                <label for="first-name">Last Name:</label>
+                <input class="last-name" name="last-name" placeholder="Doe">
+                <label for="street">Street Address:</label>
+                <input class="street" name="street" placeholder="123 Main St.">
+                <label for="apt">Apt, #, etc. (optional):</label>
+                <input class="apt" name="apt" placeholder="B">
+                <label for="city">City:</label>
+                <input class="city" name="city" placeholder="Carbondale">
+                <label for="state">State:</label>
+                <input class="state" name="state" placeholder="CO or Colorado">
+                <label for="zip-code">ZIP:</label>
+                <input class="zip-code" name="zip-code" placeholder="81623">
+                <label for="cc-number">Credit Card # (no dashes):</label>
+                <input class="cc-number" name="cc-number" type="password" placeholder="1234567890123456">
+                <label for="expiration">Expiration (MM/DD/YYYY):</label>
+                <input class="expiration" name="expiration" placeholder="01/01/2020">
+                <label for="cvv">Security Code:</label>
+                <input class="cvv" name="cvv" placeholder="123">
+                <button class="btn btn-primary btn-purchase" type="button">Complete Purchase</button>
+            </div>
         </section>
         <div id="bagel-menu">
             <h2>You ready for all these B.A.D. Bagels?</h2>
@@ -160,7 +222,7 @@
                 <p style="text-align: center;">If you don't already have an account please use the signup form below</p>
                 <input class="username" name="username" placeholder="Username">
                 <input class="password" name="password" placeholder="Password" type="password">
-                <button class="login-button" type="submit">LOGIN</button>
+                <button class="login-button btn btn-primary" type="submit">LOGIN</button>
             </div>
             <div class="sign-up-form card jumbotron">
                 <h2 style="text-align: center;">Sign Up</h2>
@@ -168,7 +230,7 @@
                 <input class="username" name="username" placeholder="Desired Username">
                 <input class="password" name="password" placeholder="Password (must be 6 characters)" type="password">
                 <input class="email-address" name="email" placeholder="Email Address">
-                <button class="sign-up-button" type="submit">SIGN UP</button>
+                <button class="sign-up-button btn btn-primary" type="submit">SIGN UP</button>
             </div>
         </div>
     </main>

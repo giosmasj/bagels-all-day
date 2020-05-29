@@ -1,5 +1,3 @@
-const bagelList = document.querySelector('#bagels')
-const bagelsURL = `http://localhost:3000/bagels`
 const quantitySelect = document.querySelector('.quantity')
 const bagelMenu = document.querySelector('#bagel-menu')
 const aboutLink = document.querySelector('#about-link')
@@ -10,10 +8,10 @@ const cartContent = document.querySelector('.content-section')
 const loginLink = document.querySelector('#login-link')
 const loginPage = document.querySelector('.login-page')
 const loginForm = document.querySelector('.login-form')
-
-fetch(bagelsURL)
-.then(response => response.json())
-// .then(showBagels)
+const shippingButton = document.querySelector('.btn-to-shipping')
+const shippingPage = document.querySelector('#shipping')
+const billingButton = document.querySelector('.btn-to-billing')
+const billingPage = document.querySelector('#billing')
 
 welcome()
 
@@ -22,6 +20,8 @@ function welcome(){
     aboutInfo.style.display = 'block'
     cartContent.style.display='none'
     loginPage.style.display = 'none'
+    shippingPage.style.display = 'none'
+    billingPage.style.display = 'none'
 }
 
 aboutLink.addEventListener('click', event => renderAboutInfo())
@@ -32,6 +32,8 @@ function renderAboutInfo(){
     bagelMenu.style.display = 'none'
     cartContent.style.display='none'
     loginPage.style.display = 'none'
+    shippingPage.style.display = 'none'
+    billingPage.style.display = 'none'
 }
 
 menuLink.addEventListener('click', event => renderBagels())
@@ -42,17 +44,9 @@ function renderBagels(){
     bagelMenu.style.display = 'block'
     aboutInfo.style.display = 'none'
     loginPage.style.display = 'none'
+    shippingPage.style.display = 'none'
+    billingPage.style.display = 'none'
 }
-
-// cartLink.addEventListener('click', event => renderCart())
-
-// function renderCart(){
-//     event.preventDefault()
-//     bagelMenu.style.display = 'none'
-//     aboutInfo.style.display = 'none'
-//     cartContent.style.display='block'
-//     loginPage.style.display = 'none'
-// }
 
 loginLink.addEventListener('click', event => renderLoginPage())
 
@@ -62,44 +56,34 @@ function renderLoginPage(){
     aboutInfo.style.display = 'none'
     cartContent.style.display='none'
     loginPage.style.display = 'block'
+    shippingPage.style.display = 'none'
+    billingPage.style.display = 'none'
 }
 
+shippingButton.addEventListener('click', event => renderShippingPage())
 
-// function showBagels(){
-    // bagels.forEach(bagel => {
-    //     const oneBagel = document.createElement('li')
-    //     oneBagel.textContent = bagel.title
-    //     const addToCart = document.createElement('button')
-    //     addToCart.innerText = 'Add to Cart'
-    //     const quantitySelect = document.createElement('select')
-    //     quantitySelect.innerHTML = 
-    //         `<option value="1 Dozen">1 Dozen</option>
-    //         <option value="2 Dozen">2 Dozen</option>
-    //         <option value="3 Dozen">3 Dozen</option>
-    //         <option value="4 Dozen">4 Dozen</option>
-    //         <option value="5 Dozen">5 Dozen</option>
-    //         <option value="6 Dozen">6 Dozen</option>
-    //         <option value="7 Dozen">7 Dozen</option>
-    //         <option value="8 Dozen">8 Dozen</option>
-    //         <option value="9 Dozen">9 Dozen</option>
-    //         <option value="10 Dozen">10 Dozen</option>`
-    //     bagelList.append(oneBagel, quantitySelect, addToCart)
-    //     const bagelPrice = document.createElement('p')
-    //     bagelPrice.textContent = `$${bagel.price} per dozen`
-    //     oneBagel.append(bagelPrice)
+function renderShippingPage(){
+    event.preventDefault()
+    bagelMenu.style.display = 'none'
+    aboutInfo.style.display = 'none'
+    cartContent.style.display='none'
+    loginPage.style.display = 'none'
+    shippingPage.style.display = 'block'
+    billingPage.style.display = 'none'
+}
 
-    // })
-// }
+billingButton.addEventListener('click', event => renderBillingPage())
 
-// const removeCartItemButtons = document.getElementsByClassName('btn-danger')
+function renderBillingPage(){
+    event.preventDefault()
+    bagelMenu.style.display = 'none'
+    aboutInfo.style.display = 'none'
+    cartContent.style.display='none'
+    loginPage.style.display = 'none'
+    shippingPage.style.display = 'none'
+    billingPage.style.display = 'block'
+}
 
-// for (let i = 0; i < removeCartItemButtons.length; i++){
-//     let button = removeCartItemButtons[i]
-//     button.addEventListener('click', function(event) {
-//         let buttonClicked = event.target
-//         buttonClicked.parentElement.parentElement.remove()
-//     })
-// }
 if (document.readyState == 'loading') {
     document.addEventListener('DOMContentLoaded', ready)
 } else {
